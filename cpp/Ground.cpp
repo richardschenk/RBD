@@ -1,5 +1,5 @@
 #include "..\headers\Ground.hpp"
 
-Ground::Ground() {
-    edges.push_back(Vector(0.3, 0.6));
+void Ground::addEdge(float x, float y) {
+    edges.push_back(Vector(x, y));
 }
