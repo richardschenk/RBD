@@ -12,6 +12,8 @@ class Particle {
     public:
         Particle();
         Particle(float, float, float);
-        void move(float)
+        void move(float);
+
+        friend std::ostream& operator<<(std::ostream&, const Particle&);
 };
 #endif
