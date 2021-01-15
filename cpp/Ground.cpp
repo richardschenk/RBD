@@ -1,6 +1,5 @@
 #include "..\headers\Ground.hpp"
 
-Ground::Ground(float x_, float y_) {
-    x = x_;
-    y = y_;
+Ground::Ground() {
+    edges.push_back(Vector(0.3, 0.6));
 }
