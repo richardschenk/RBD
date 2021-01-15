@@ -4,8 +4,8 @@
 #include "..\headers\Vector.hpp"
 class Ground {
     private:
-        vector<Vector> edges;
+        std::vector<Vector> edges;
     public:
-        Ground();
+        void addEdge(float, float);
 };
 #endif
