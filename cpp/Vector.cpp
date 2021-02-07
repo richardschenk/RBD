@@ -10,8 +10,11 @@ Vector::Vector(float x_, float y_) {
     y = y_;
 }
 
-Vector Vector::operator+(Vector& vec) {
-    return Vector(x + vec.getX(), y + vec.getY());
+Vector Vector::operator+(const Vector& vec) {
+    return Vector(x + vec.x, y + vec.y);
+}
+Vector Vector::operator-(const Vector& vec) {
+    return Vector(x - vec.x, y - vec.y);
 }
 Vector Vector::operator*(float k) {
     return Vector(k*x, k*y);
@@ -28,6 +31,14 @@ void Vector::setX(float x_) {
 }
 void Vector::setY(float y_) {
     y = y_;
+}
+float Vector::length() {
+    return sqrt(x*x + y*y);
+}
+void Vector::normalize() {
+    float l = length();
+    x /= l;
+    y /= l;
 }
 
 std::ostream& operator<<(std::ostream& os, const Vector& vec) {
