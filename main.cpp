@@ -7,12 +7,12 @@ using namespace std;
 
 int main() {
     Vector F = Vector(0.0, -0.0001);
-    Particle p = Particle(0.5, 0.5, 0.025);
+    Particle p = Particle(0.1, 0.5, 0.025);
     Ground g;
 
 
     sf::RenderWindow window(sf::VideoMode(800, 800), "RBD");
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(30);
 
     while (window.isOpen())
     {
@@ -23,7 +23,7 @@ int main() {
                 window.close();
         }
 
-        p.move(F);
+        p.move(F, g);
 
         window.clear();
         g.draw(window);

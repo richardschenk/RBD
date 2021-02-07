@@ -20,10 +20,10 @@ Vector Vector::operator*(float k) {
     return Vector(k*x, k*y);
 }
 
-float Vector::getX() {
+float Vector::getX() const {
     return x;
 }
-float Vector::getY() {
+float Vector::getY() const {
     return y;
 }
 void Vector::setX(float x_) {

@@ -11,6 +11,8 @@ class Ground {
     public:
         void addEdge(float, float);
         void draw(sf::RenderWindow&);
+        std::vector<Vector>& getEdges();
+        std::vector<Vector>& getNormals();
 
         Ground();
 };

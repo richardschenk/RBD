@@ -14,8 +14,8 @@ class Vector {
         Vector operator*(float);
         friend std::ostream& operator<<(std::ostream&, const Vector&);
 
-        float getX();
-        float getY();
+        float getX() const;
+        float getY() const;
         float length();
         void normalize();
 
