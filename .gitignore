@@ -1,4 +1,4 @@
 main.exe
 .vscode/
-Test.json
+*.json
 c.bat
