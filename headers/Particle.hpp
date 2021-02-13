@@ -1,24 +1,24 @@
-#ifndef _PARTICLE_HPP_
-#define _PARTICLE_HPP_
+#pragma once
 #include "Vector.hpp"
+#include <cmath>
 #include "Ground.hpp"
 #include <SFML/Graphics.hpp>
 class Particle {
     private:
+        int hitCount;
         float radius;
         float mass;
         Vector pos;
         Vector vel;
         Vector acc;
 
-        Vector groundCollision(Ground&);
+        Vector groundCollision(Ground&, Vector&);
 
     public:
         Particle();
-        Particle(float, float, float);
+        Particle(const Vector&, const Vector&, float);
         void move(Vector&, Ground&);
         void draw(sf::RenderWindow&);
 
         friend std::ostream& operator<<(std::ostream&, const Particle&);
 };
-#endif
